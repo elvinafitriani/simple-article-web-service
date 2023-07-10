@@ -60,7 +60,7 @@ func (us usecase) GetByAuthor(ctx *gin.Context) {
 
 	if err != nil {
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"Error": err.Error()})
-		return
+		return	
 	}
 
 	ctx.JSON(http.StatusOK, result)
